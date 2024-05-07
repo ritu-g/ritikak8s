@@ -1,0 +1,9 @@
+nodes:
+  - name: node1
+    ip: 192.168.1.1
+    role: webserver
+    environment: production
+  - name: node2
+    ip: 192.168.1.2
+    role: database
+    environment: staging
