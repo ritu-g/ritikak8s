@@ -1,0 +1,65 @@
+kubectl cluster-info    # to get cluster information
+kubectl api-resources   # to list available k8s objects
+kubectl api-version     # to list available api versions
+kubectl get nodes       # to get list of nodes
+kubectl get nodes -o wide   # to get IP of the nodes
+kubectl get pods        # to get list of pods
+kubectl get pods -o wide    # to get IP of the pods
+aws eks update-kubeconfig --region us-east-1 --name my-cluster ----> to configure with cloudshell
+  
+kubectl cluster-info ---> to get information about cluster
+
+kubectl get nodes ---> to get information about nodes
+
+kubectl run my-first-pod --image=<image_name> ----> to create pod 
+
+kubectl get pods ----> to get information about pods
+
+kubectl get -o wide pods ---> to get wide information about pods 
+
+kubectl get nodes ----> to get information about nodes
+
+kubectl get -o wide nodes ----> to get wide info about nodes
+
+kubectl describe pod my-first-pod ----> to describe detailed information about pod  
+
+kubectl logs my-pod ---> to check logs of pods
+
+kubectl logs -c my-pod my-pod 
+
+kubectl explain pods  ----> to know about pods
+
+kubectl exec -it my-pod -c my-pod-container -- /bin/bash
+aws eks update-kubeconfig --region us-east-1 --name my-cluster 
+  
+kubectl cluster-info 
+
+kubectl get nodes 
+
+kubectl get nodes -o wide 
+
+kubectl run my-first-pod --image=nginx
+
+kubectl get pods 
+
+kubectl get -o wide pods  
+
+kubectl describe pod my-first-pod 
+
+kubectl run my-pod --port=80 --image=nginx 
+
+kubectl logs my-pod 
+
+kubectl logs -c <container_name> <pod_name>
+
+kubectl explain pods  
+------------------------------------------------------------------------------------------------------------------------------
+kubectl expose pod my-first-pod --port=80 --type=clusterIP 
+
+kubectl get service 
+
+kubectl expose pod my-first-pod --port=80 --target-port=80 
+
+kubectl expose pod my-first-pod --port=80 --type=clusterIP  
+
+kubectl delete pod my-pod
