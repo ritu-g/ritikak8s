@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-image-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: custom-image-app
+  template:
+    metadata:
+      labels:
+        app: custom-image-app
+    spec:
+      containers:
+      - name: custom-image-container
+        image: ritudocer/custom_image
+        ports:
+        - containerPort: 80
