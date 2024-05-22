@@ -18,7 +18,7 @@ spec:
         spec: 
           containers:
              - name: frontendapp
-               image: piyu5233/project:studentapp 
+               image: nginx
                ports:
                   - containerPort: 80
                     protocol: TCP
