@@ -35,8 +35,8 @@ filter{
     values=["ubuntu-pro-server/images/hvm-ssd-gp3/ubuntu-noble-24.04-arm64-pro-server-20240423"]
 }
 }
-resource "aws_instance" "my_tf_instance"
-resource "aws_instance" "my_tf_instance" {
+resource "aws_instance" "instance1"
+resource "aws_instance" "instance1" {
   ami                    = data.aws_ami.my_ami.id
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.my_security_1.id]
@@ -58,5 +58,5 @@ output "hellow" {
 }
 
 output "public_ip" {
-  value = aws_instance.my_tf_instance.public_ip
+  value = aws_instance.instance1.public_ip
 }
