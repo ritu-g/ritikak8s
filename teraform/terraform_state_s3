@@ -50,7 +50,7 @@ resource "aws_instance" "instance1" {
   ami                    = data.aws_ami.sample_instance.id
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
-  key_name               = "sample"
+  key_name               = "sample1"
 
   tags = {
     Name = "allow_tls"
