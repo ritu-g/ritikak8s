@@ -46,7 +46,7 @@ data "aws_ami" "sample_instance" {
   }
 }
 
-resource "aws_instance" "instance1" {
+resource "aws_instance" "sample_instance" {
   ami                    = data.aws_ami.sample_instance.id
   instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.allow_tls.id]
@@ -68,5 +68,5 @@ output "hello" {
 }
 
 output "public_ip" {
-  value = aws_instance.instance1.public_ip
+  value = aws_instance.sample_instance.public_ip
 }
