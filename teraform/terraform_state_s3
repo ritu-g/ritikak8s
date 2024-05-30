@@ -42,7 +42,7 @@ data "aws_ami" "sample_instance" {
 
   filter {
     name   = "name"
-    values = ["ubuntu-pro-server/images/hvm-ssd-gp3/ubuntu-noble-24.04-arm64-pro-server-20240423"]
+    values = ["al2023-ami-2023.4.20240528.0-kernel-6.1-x86_64"]
   }
 }
 
