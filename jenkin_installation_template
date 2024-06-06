@@ -1,0 +1,27 @@
+create a t2.medium instance with aws linux machine
+add 8080 port in security group
+
+sudo su
+
+ yum install java-17-amazon-corretto.x86_64 -y
+
+  yum update -y
+
+   wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+    
+ rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+  yum upgrade
+
+   yum install jenkins -y
+
+    systemctl enable jenkins
+
+     systemctl start jenkins
+
+      systemctl status jenkins
+
+go to browser <instance ip>:8080
+       cat /var/lib/jenkins/secrets/initialAdminPassword
