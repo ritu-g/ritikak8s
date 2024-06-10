@@ -1,0 +1,19 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-database
+spec:
+  selector:
+    matchLabels:
+      app: mysql-database
+  template:
+    metadata:
+      labels:
+        app: mysql-database
+    spec:
+      containers:
+      - name: mysql
+        image: mayur4279/angular:mysql-database
+        ports:
+        - containerPort: 3306  

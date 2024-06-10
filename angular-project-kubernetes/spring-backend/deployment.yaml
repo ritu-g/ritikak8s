@@ -1,0 +1,19 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-backend 
+spec:
+  selector:
+    matchLabels:
+      app: spring-backend
+  template:
+    metadata:
+      labels:
+        app: spring-backend
+    spec:
+      containers:
+      - name: myapp
+        image: mayur4279/angular:spring-backend 
+        ports:
+        - containerPort: 8080

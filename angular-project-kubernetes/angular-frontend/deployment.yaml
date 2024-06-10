@@ -1,0 +1,18 @@
+rapiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-frontend
+spec:
+  selector:
+    matchLabels:
+      app: angular-frontend
+  template:
+    metadata:
+      labels:
+        app: angular-frontend
+    spec:
+      containers:
+      - name: angular-frontend
+        image: nginx:latest
+        ports:
+        - containerPort: 80
