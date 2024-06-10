@@ -3,7 +3,10 @@ wget apache tomcat
 unzip the file and now
 add https://webapp2-akashapp.s3.amazonaws.com/student.war $APP_HOME/webapps/
 add https://webapp-akash.s3.amazonaws.com/mysql-connector-j-8.3.0.jar $APP_HOME/lib
-yum install java
+yum install java -y
+yum install mariadb105 -y
+
+go to security group add 8080 and 3306 ports
 create database
  mysql -h <database-end-point> -u <admin-usernmae> -p<admin-password>
 Create database studentapp;
@@ -15,6 +18,6 @@ paste the following with required changes
 
 <Resource name="jdbc/TestDB" auth="Container" type="javax.sql.DataSource"
     maxTotal="100" maxIdle="30" maxWaitMillis="10000"
-    username="${DB_USERNAME}" password="${DB_PASSWORD}"
+    username="${admin}" password="${Admin1234}"
     driverClassName="com.mysql.cj.jdbc.Driver"
     url="jdbc:mysql://studentdb-svc:3306/studentapp"/>
